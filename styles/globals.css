@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Base Styles */
 html, body {
   padding: 0;
@@ -69,3 +73,29 @@ html, body {
 .nav-button:hover {
   background: #2563eb;
 }
+
+/* === Yonda helper classes (added) === */
+html, body { background:#0b0d12; color:#e6ecf5; }
+
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:.5rem 1rem; border-radius:.75rem;
+  font-weight:700; color:#0b0d12; background:#5ec2ef;
+}
+
+.btn-ghost {
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:.5rem 1rem; border-radius:.75rem;
+  border:1px solid rgba(255,255,255,.2); color:#e6ecf5;
+  background:transparent;
+}
+
+.input {
+  width:100%; padding:.5rem .75rem; border-radius:.75rem;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(0,0,0,.3); color:#e6ecf5;
+}
+
+.hr { border-top:1px solid rgba(255,255,255,.15); margin:1rem 0; }
+
+.container { max-width:720px; margin:0 auto; padding:16px; }
