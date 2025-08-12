@@ -1,21 +1,71 @@
-:root { --bg:#0b0d12; --card:#121722; --ink:#e6ecf5; --muted:#9db2ce; --cta:#2dd4bf; --accent:#60a5fa; }
-html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji; }
-a { color: var(--accent); text-decoration: none; }
-.container { max-width: 760px; margin: 0 auto; padding: 16px; }
-.card { background: var(--card); border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
-.row { display:flex; gap:12px; flex-wrap:wrap; }
-.btn { background: var(--cta); color:#0b0d12; border:0; border-radius: 10px; padding:10px 14px; font-weight:600; cursor:pointer; }
-.btn.secondary { background:#1f2937; color: var(--ink); }
-.input { width:100%; background:#0f1420; color:var(--ink); border:1px solid #22304a; border-radius:10px; padding:10px 12px; }
-.tag { background:#1e2533; color:var(--muted); padding:6px 10px; border-radius:999px; font-size:12px; }
-.grid3 { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:12px; }
-@media (max-width: 720px){ .grid3 { grid-template-columns: 1fr 1fr; } }
-.badge { background:#0f1420; border:1px solid #22304a; padding:6px 8px; border-radius:8px; font-size:12px; color:var(--muted); }
-.header { display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; }
-.qactions { display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:10px; }
-.qbtn { background:#0f1420; border:1px solid #22304a; border-radius:12px; padding:12px; text-align:center; }
-.qbtn strong{ display:block; margin-top:6px; }
-.list { display:flex; flex-direction:column; gap:10px; }
-.list .item { background:#0f1420; border:1px solid #22304a; border-radius:12px; padding:12px; }
-hr.hr { border:0; border-top:1px solid #22304a; margin: 16px 0; }
-.color-dot { width:14px; height:14px; display:inline-block; border-radius:999px; margin-right:8px; vertical-align:middle; }
+/* Base Styles */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0f1117;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Utility Classes */
+.card {
+  background: #1a1d26;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-sent {
+  background-color: #2563eb;
+}
+
+.badge-delivered {
+  background-color: #16a34a;
+}
+
+.badge-alert {
+  background-color: #facc15;
+  color: #000;
+}
+
+/* LED Slot Styles */
+.led-slot {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+  background: #1f2230;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.led-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+/* Navbar Buttons */
+.nav-button {
+  background: #1a1d26;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.nav-button:hover {
+  background: #2563eb;
+}
