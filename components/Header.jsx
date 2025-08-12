@@ -1,17 +1,12 @@
-export default function Header({ title='Yonda', subtitle='' }){
+export default function Header() {
   return (
-    <div className="header">
-      <div>
-        <div style={{fontSize:22, fontWeight:800}}>Yonda</div>
-        {subtitle && <div className="badge">{subtitle}</div>}
-      </div>
-      <div className="row">
-        <a href="/dashboard" className="badge">Dashboard</a>
-        <a href="/contacts" className="badge">Contacts</a>
-        <a href="/messages" className="badge">Messages</a>
-        <a href="/map" className="badge">GPS</a>
-        <a href="/settings" className="badge">Settings</a>
-      </div>
-    </div>
+    <header className="flex justify-between items-center p-4 bg-[#1a1d26]">
+      <h1 className="text-xl font-bold text-white">Yonda</h1>
+      <nav className="flex gap-2">
+        {["Dashboard", "Contacts", "Messages", "GPS", "Settings"].map(tab => (
+          <button key={tab} className="nav-button">{tab}</button>
+        ))}
+      </nav>
+    </header>
   );
 }
